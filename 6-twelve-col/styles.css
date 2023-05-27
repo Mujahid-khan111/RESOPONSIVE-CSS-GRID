@@ -1,0 +1,135 @@
+@import url();
+
+body {
+    margin: 0;
+    font-family: "Poppins";
+    background: lightblue;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 30px;
+}
+
+/* HEADER  and H1 HEDING*/
+header {
+    padding: 10px 40px;
+    background: wheat;
+    align-items: center;
+}
+header h1 {
+    grid-column: 1/6;
+}
+
+header nav {
+    grid-column:  span 7;
+    justify-self: end;
+}
+
+header nav a {
+    color: darkblue;
+    margin-left: 10px;
+    text-decoration: none;
+}
+main {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+}
+main img {
+    grid-column: span 6;
+    width: 100%;
+    border-radius: 10px;
+}
+
+main .welcome {
+    grid-column: 8/ span 5 ;
+}
+main h2 {
+    grid-column: span 12;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+}
+
+main .card {
+    grid-column: span 4;
+    background: wheat;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 40px 40px 40px rgba(9,9,9);    
+}
+
+
+@media screen and (max-width:768px) {
+    header {
+    padding: 0 20px;
+    align-items: end;
+}
+header h1{
+    grid-column: 1/5;
+    background: none;
+    font-size: 30px;
+}
+header nav {
+    grid-column: 2/ span 7;
+    justify-self: end;
+    align-self: center;
+}
+header nav a{
+    color: white;
+}
+main {
+    max-width: 800px;
+    margin: 5px auto;
+    padding: 30px;
+}
+main img {
+    width: 200px;
+    border-radius: 30px;
+}
+main .welcome {
+    grid-column: 1/6;
+}
+}
+
+@media screen and (max-width:992px) {
+main img {
+        grid-column: 2 / span 10;
+    }
+main .welcome {
+    grid-column: 3/ span 8;
+     text-align: center;
+}
+main .card{
+    grid-column: 3/ span 8;
+}
+main img {
+    grid-column: span 12;
+    width: 100%;
+    border-radius: 10px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

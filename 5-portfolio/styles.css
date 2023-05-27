@@ -1,0 +1,115 @@
+ @import url('https://font.google.com/css2?family=Poppins:wght@200;400;500;600;800& family=VT3238&display=swap');
+body{
+    margin: 0;
+    font-family:"Poppins";
+    /* border: 40px solid black;
+    border-radius: 50px;
+    border-top: 30px solid blue;
+    border-bottom: 30px solid red;
+    border-left: 40px solid green;    */
+}
+
+ main {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    min-height: 100%;
+}
+.panel {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.panel .text {
+    background:wheat;
+    color: black;
+    padding: 30px 60px;
+}
+/* Welcome panel */
+.panel.welcome {
+   background: #323230;
+   padding: 30px 60px;
+   grid-auto-rows: 1fr; 
+}
+.panel.welcome nav a {
+      color: rgb(238, 168, 39);
+      text-decoration: none;
+      margin-right: 20px;
+
+}
+.panel.welcome p{
+    color: #f5e5e5;
+    max-width: 540px;
+    line-height: 2em;
+}
+.panel.welcome h1 {
+    color: #eeeee7;
+    font-size: 3em;
+}
+.panel.welcome footer {
+    align-self: end;
+}
+.panel.welcome footer p {
+    background: rgb(127, 131, 133);
+    color: black; 
+    font-size: 1.4em;
+    border: 5px solid black;
+    border-left: 5px solid red;
+    border-right: 5px solid red;
+    border-top: 5px solid blue;
+    border-bottom: 5px solid blue;
+
+}
+/* About panel */
+.panel.about {
+    grid-template-rows: 1fr 1fr;
+    overflow: hidden;
+}
+.panel.about img {
+    min-width:100%;
+    min-height: 100%;
+}
+ 
+/* photos panel */
+.panel.photos {
+    grid-template-rows: 1fr 3fr;
+    overflow: hidden;
+}
+.panel.photos img {
+    min-height: 100%;
+    min-height: 100%;
+}
+
+@media screen and (max-width: 1400px){
+    main {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .panel.photos {
+        grid-column: span 2;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(1,1fr);
+    }
+}
+@media screen and (max-width:960px) {
+    main {
+        grid-template-columns: 100%;
+        grid-template-rows: 500px 400px 400px;
+    }
+    .panel.about {
+        grid-row: 2;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .panel img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 680px) {
+    main {
+        grid-template-rows: 700px 600px 600px;     
+    }
+    .panel.about, .panel.photos {
+        grid-template-columns: 1fr;
+        grid-column: span 1;
+        grid-template-rows: repeat(2,1fr);
+        border-bottom: 1px solid #c0c014;
+    }
+}
