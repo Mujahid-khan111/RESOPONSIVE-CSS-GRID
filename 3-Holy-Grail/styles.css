@@ -1,0 +1,110 @@
+@import url('https://font.google.com/css2?family=Poppins:wght@200;400;500;600;800& family=VT3238&display=swap');
+
+body {
+    margin: 20px;
+    font-size:"Poppins";
+    background: lightgoldenrodyellow;
+    border:5px solid black;
+    border-radius: 50px;
+    border-left:solid blue;
+    border-right:solid green;
+    border-top:solid  red;
+    border-bottom:solid maroon;
+    border-bottom-width: 30px;
+    border-top-width: 40px;
+    border-left-width: 40px;
+    border-right-width: 40px;
+    background: url(https://i.pinimg.com/originals/50/a7/8b/50a78b21b11300c8e71ec378ebdbaabf.jpg);
+
+
+    /* one side kisi bhi kone ko redius krne ke liye */
+     /* border-bottom-right-radius: 100px; */
+
+}
+
+ul, li {
+    padding: 0;
+    list-style-type: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    column-gap: 30px;
+}
+/* header Work */
+header{
+    grid-column: span 3;
+    text-align: center;
+    border-bottom: 1px solid #0c2b0281 ;
+}
+/* nav tag Work */
+nav {
+    padding: 40px;
+    border-right: 1px solid #dddf;
+}
+
+nav li {
+    text-decoration: underline;
+}
+
+/* article Work */
+article h2{
+    font-size: 3.5em;
+    max-width: 800px;
+}
+
+article img{
+    width: 100%;
+}
+
+article p{
+ margin-top: 30px;
+ line-height: 2em;
+ color: #000;
+ /* font-size: 25px; */
+}
+
+/* footer Work */
+footer {
+    grid-column: span 3;
+    text-align: center;
+    font-size: 2em;
+    border-top: 10px solid #65645654 ;
+    color: darkblue;
+}
+
+/* respnsive */
+
+@media screen and (max-width:1200px){
+    nav {
+        grid-column: span 3;
+        border-right: 0;
+         border-bottom: 1px solid #eee;
+    }
+    nav li{
+        display: inline-block;
+        margin-right:10px;
+    }
+    article{
+        grid-column: span 2;
+        
+    }
+    aside{
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    nav,article,aside {
+        grid-column: span 3;
+    }
+}
+
+aside {
+    padding-right: 0;
+    border: 1px solid black;
+}
+article h2 {
+    font-size: 2.5em;
+}
